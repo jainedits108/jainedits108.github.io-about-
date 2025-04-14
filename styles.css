@@ -12,10 +12,8 @@ body {
   background-size: cover;
   background-position: center;
   color: #333;
-  margin: 0;
-  padding: 0;
   height: 100vh; /* Ensures the body takes up the full viewport height */
-  display: flex; /* Ensures the body takes full height and displays the content centered */
+  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -32,13 +30,13 @@ body {
 /* Flex layout for left (photo) and right (text) sections */
 .content {
   display: flex;
+  flex-direction: row; /* Aligns the photo and text side by side */
   width: 80%;
   max-width: 1200px;
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  flex-direction: row; /* Ensures that content stays in one row */
 }
 
 /* Left side: Your photo */
@@ -62,7 +60,7 @@ body {
   flex-direction: column;
   justify-content: center; /* Vertically centers the text */
   text-align: left;
-  height: 100%; /* Make sure the div takes up the full height of the container */
+  height: 100%;
 }
 
 /* Text formatting */
