@@ -21,46 +21,38 @@ body {
 /* Container for content */
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100%;
-  width: 100%;
-}
-
-/* Flex layout for left (photo) and right (text) sections */
-.content {
-  display: flex;
-  flex-direction: row; /* Aligns the photo and text side by side */
   width: 80%;
   max-width: 1200px;
   background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
   border-radius: 10px;
-  padding: 20px;
+  padding: 40px; /* Adding padding to the entire container */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  height: 80%; /* To make it smaller in height */
 }
 
 /* Left side: Your photo */
-.photo {
-  flex: 1;
-  margin-right: 20px;
+.left {
+  flex: 0 0 45%; /* Take up 45% of the space */
+  padding-right: 20px; /* Add space between image and text */
 }
 
-.photo img {
+.left img {
   width: 100%;
+  height: auto;
   border-radius: 10px;
   object-fit: cover;
-  height: auto;
 }
 
-/* Right side: Text */
-.text {
-  flex: 2;
-  padding: 20px;
+/* Right side: Text content */
+.right {
+  flex: 0 0 45%; /* Take up 45% of the space */
+  padding-left: 20px; /* Add space between image and text */
   display: flex;
   flex-direction: column;
   justify-content: center; /* Vertically centers the text */
   text-align: left;
-  height: 100%;
 }
 
 /* Text formatting */
@@ -77,16 +69,20 @@ p {
 
 /* Additional styling for responsiveness */
 @media (max-width: 768px) {
-  .content {
-    flex-direction: column;
-    text-align: center;
+  .container {
+    flex-direction: column; /* Stack image and text vertically */
+    height: auto;
+    padding: 20px; /* Add padding on small screens */
   }
-  
-  .photo {
+
+  .left, .right {
+    flex: none;
+    width: 100%;
     margin-bottom: 20px;
   }
 
-  .text {
-    padding: 10px;
+  .left img {
+    width: 100%;
+    height: auto;
   }
 }
