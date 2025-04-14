@@ -8,7 +8,7 @@
 /* Set the background image */
 body {
   font-family: Arial, sans-serif;
-  background-image: url('https://raw.githubusercontent.com/jainedits108/jainedits108.github.io-about-/main/Gemini_Generated_Image_m3ltl2m3ltl2m3lt.jpeg');
+  background-image: url('https://raw.githubusercontent.com/jainedits108/jainedits108.github.io-about-/main/Gemini_Generated_Image_hm0kabhm0kabhm0k.jpeg');
   background-size: cover;
   background-position: center;
   color: #333;
@@ -54,10 +54,11 @@ body {
 .text {
   flex: 2;
   padding: 20px;
-  text-align: left;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* This will center the text vertically */
+  justify-content: center; /* Vertically centers the text */
+  text-align: left;
+  height: 100%; /* Make sure the div takes up the full height of the container */
 }
 
 /* Text formatting */
