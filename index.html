@@ -3,10 +3,119 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About - Jain Edits</title>
+  <title>About - Jain_edits108</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('https://github.com/jainedits108/jainedits108.github.io-about-/blob/main/Gemini_Generated_Image_hm0kabhm0kabhm0k.jpeg?raw=true');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px 30px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 40px;
+      padding: 60px;
+      box-sizing: border-box;
+    }
+
+    .image-section img {
+      max-width: 350px;
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    }
+
+    .text-section {
+      max-width: 600px;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 30px;
+      border-radius: 20px;
+      line-height: 1.6;
+    }
+
+    .text-section h1 {
+      font-size: 1.8em;
+      margin-top: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 30px;
+      }
+
+      .text-section, .image-section {
+        width: 100%;
+        max-width: 90%;
+      }
+
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <!-- Navigation bar -->
+  <nav>
+    <ul class="nav-left">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">The Team</a></li>
+    </ul>
+    <ul class="nav-right">
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="stories.html">Stories</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Content -->
   <div class="container">
     <div class="image-section">
       <img src="https://github.com/jainedits108/jainedits108.github.io-about-/blob/main/image%20(13).png?raw=true" alt="Photo of me">
