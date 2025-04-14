@@ -1,56 +1,23 @@
-/* Reset default margins */
 body {
-  margin: 0;
-  padding: 0;
   font-family: Arial, sans-serif;
-  height: 100vh;
-  background-image: url('background.jpg'); /* <-- your local background image */
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Add a dark overlay for better text readability */
-.overlay {
-  background-color: rgba(0, 0, 0, 0.5); /* semi-transparent black */
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Main layout */
-.content {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  color: white;
-  max-width: 900px;
+  background-color: #f9f9f9;
+  color: #333;
   padding: 20px;
+  margin: 0;
 }
 
-/* Left image */
-.left-img {
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
-/* Text section */
-.text-section {
-  text-align: left;
-}
-
-.text-section h1 {
-  margin-bottom: 10px;
+h1 {
   font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-.text-section p {
+p {
   font-size: 1.2rem;
   line-height: 1.6;
 }
