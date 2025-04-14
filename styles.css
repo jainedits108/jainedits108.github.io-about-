@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-image: url('https://raw.githubusercontent.com/jainedits108/jainedits108.github.io-about-/main/Gemini_Generated_Image_hm0kabhm0kabhm0k.jpeg');
+  background-image: url('https://github.com/jainedits108/jainedits108.github.io-about-/blob/main/Gemini_Generated_Image_hm0kabhm0kabhm0k.jpeg?raw=true');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,12 +11,12 @@ body {
 
 .container {
   display: flex;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 50px;
+  align-items: center;
+  gap: 40px;
   padding: 60px;
   box-sizing: border-box;
-  min-height: 100vh;
 }
 
 .image-section img {
@@ -32,4 +32,21 @@ body {
   padding: 30px;
   border-radius: 20px;
   line-height: 1.6;
+}
+
+.text-section h1 {
+  font-size: 1.8em;
+  margin-top: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .text-section, .image-section {
+    width: 100%;
+    max-width: 90%;
+  }
 }
