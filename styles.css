@@ -9,8 +9,8 @@
 body {
   font-family: Arial, sans-serif;
   background-image: url('https://github.com/jainedits108/jainedits108.github.io-about-/blob/main/Gemini_Generated_Image_m3ltl2m3ltl2m3lt.jpeg?raw=true');
-  background-size: cover; /* Ensures the image covers the entire page */
-  background-position: center; /* Centers the image */
+  background-size: cover;
+  background-position: center;
   color: #333;
   margin: 0;
   padding: 0;
