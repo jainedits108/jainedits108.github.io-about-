@@ -16,9 +16,6 @@ nav {
   justify-content: space-between;
   padding: 20px 40px;
   background-color: rgba(0, 0, 0, 0.7);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
 }
 
 nav ul {
@@ -47,7 +44,6 @@ nav a:hover {
   padding: 80px 60px 40px;
   gap: 60px;
   flex-wrap: wrap;
-  box-sizing: border-box;
 }
 
 /* Image section */
@@ -73,7 +69,7 @@ nav a:hover {
   margin-top: 0;
 }
 
-/* Mobile Responsive */
+/* Responsive */
 @media screen and (max-width: 768px) {
   .container {
     flex-direction: column;
