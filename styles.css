@@ -54,7 +54,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 4rem; /* Increased gap between image and text */
+    gap: 4rem;
     max-width: 1200px;
     margin: 80px auto 20px;
     padding: 0 20px;
@@ -65,13 +65,14 @@ nav {
     flex: 1;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end; /* Align image to bottom */
 }
 
 .about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: top; /* Crop top if needed */
     border-radius: 10px;
     border: 3px solid white;
     max-height: 600px;
@@ -83,9 +84,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.65);
     padding: 2rem;
-    border-radius: 10px;
     max-height: 600px;
 }
 
@@ -100,13 +99,17 @@ nav {
         margin-top: 60px;
         padding: 0 10px;
         min-height: auto;
-        gap: 2rem; /* Smaller gap on mobile */
+        gap: 2rem;
     }
 
     .about-image, .about-text {
         flex: none;
         width: 100%;
         max-height: none;
+    }
+
+    .about-image {
+        align-items: center; /* Center image on mobile */
     }
 
     .about-image img {
