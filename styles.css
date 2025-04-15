@@ -129,3 +129,36 @@ nav {
         width: 100%;
     }
 }
+.about-flex {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px; /* Room for fixed navbar */
+    padding-left: 5%;   /* 0.5 unit from left */
+    padding-right: 5%;  /* 0.5 unit from right */
+    height: calc(100vh - 80px); /* Full height minus navbar height */
+    box-sizing: border-box;
+    gap: 10%; /* 1 unit gap between image and text (20% of 5 units is 1 unit) */
+}
+
+.about-image img {
+    height: 100%; /* Match height of text */
+    width: auto;
+    max-height: 80%; /* To avoid it going out of screen */
+    border-radius: 20px;
+    object-fit: contain;
+    border: 3px solid white;
+}
+
+.about-text {
+    color: white;
+    max-width: 40%;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.about-text h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
