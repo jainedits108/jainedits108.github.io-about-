@@ -1,11 +1,9 @@
-/* Reset default margins and padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styles */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
@@ -17,7 +15,6 @@ body {
     min-height: 100vh;
 }
 
-/* Navigation bar styling */
 nav {
     position: fixed;
     top: 0;
@@ -53,19 +50,17 @@ nav {
     background-color: #575757;
 }
 
-/* About container */
 .about-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem; /* Gap between image and text */
-    max-width: 1200px; /* Prevent touching screen edges */
-    margin: 80px auto 20px; /* Space for navbar and bottom */
-    padding: 0 20px; /* Side padding */
+    gap: 4rem; /* Increased gap between image and text */
+    max-width: 1200px;
+    margin: 80px auto 20px;
+    padding: 0 20px;
     min-height: calc(100vh - 100px);
 }
 
-/* Image section */
 .about-image {
     flex: 1;
     display: flex;
@@ -75,25 +70,23 @@ nav {
 
 .about-image img {
     width: 100%;
-    height: 100%; /* Match text container height */
-    object-fit: cover; /* Ensure image fits nicely */
+    height: 100%;
+    object-fit: cover;
     border-radius: 10px;
     border: 3px solid white;
-    max-height: 600px; /* Prevent oversized images */
+    max-height: 600px;
 }
 
-/* Text section */
 .about-text {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    text-align: center; /* Center-align text */
-    background-color: rgba(0, 0, 0, 0.65); /* Slight background for readability */
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.65);
     padding: 2rem;
     border-radius: 10px;
-    max-height: 600px; /* Match image height */
-    overflow-y: auto; /* Allow scrolling if text overflows */
+    max-height: 600px;
 }
 
 .about-text p {
@@ -101,23 +94,23 @@ nav {
     line-height: 1.6;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
-        margin-top: 60px; /* Adjust for navbar */
+        margin-top: 60px;
         padding: 0 10px;
         min-height: auto;
+        gap: 2rem; /* Smaller gap on mobile */
     }
 
     .about-image, .about-text {
         flex: none;
         width: 100%;
-        max-height: none; /* Allow natural height on mobile */
+        max-height: none;
     }
 
     .about-image img {
-        max-height: 400px; /* Smaller image on mobile */
+        max-height: 400px;
     }
 
     .about-text {
