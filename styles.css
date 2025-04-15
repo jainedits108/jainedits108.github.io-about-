@@ -162,3 +162,58 @@ nav {
     font-size: 2rem;
     margin-bottom: 20px;
 }
+/* ABOUT PAGE LAYOUT */
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 60px); /* Full height minus navbar */
+  padding: 0.5rem; /* Half unit padding around everything */
+  box-sizing: border-box;
+  margin-top: 60px; /* Push down to avoid overlap with navbar */
+  background-color: #0e0e0e;
+}
+
+/* IMAGE SECTION */
+.about-image {
+  flex: 1.75;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.5rem; /* 1 unit gap split in half on both sides */
+}
+
+.about-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  max-height: 90%;
+}
+
+/* TEXT SECTION */
+.about-text {
+  flex: 1.75;
+  background-color: transparent;
+  color: white;
+  padding: 1rem;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* NAV BAR STAYS SAME (Already in your CSS) */
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .about-container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .about-image, .about-text {
+    flex: none;
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
