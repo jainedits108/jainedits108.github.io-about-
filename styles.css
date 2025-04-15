@@ -1,22 +1,23 @@
-/* Disable scrolling */
-html, body {
-    overflow: hidden; /* Prevents scrolling */
-    height: 100%;
+/* Reset default margins and padding */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 
-/* Background */
+/* Body styles */
 body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: white;
     background-image: url('https://github.com/jainedits108/jainedits108.github.io-about-/blob/main/Gemini_Generated_Image_hm0kabhm0kabhm0k.jpeg?raw=true');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    color: white;
+    min-height: 100vh;
 }
 
-/* Navigation Bar Styling */
+/* Navigation bar styling */
 nav {
     position: fixed;
     top: 0;
@@ -27,23 +28,19 @@ nav {
     z-index: 1000;
     display: flex;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
-/* Left Nav */
-.nav-left {
+.nav-left, .nav-right {
     display: flex;
-    justify-content: flex-start;
-    margin-left: 20px;
-    padding: 0;
     list-style-type: none;
 }
 
-.nav-left li {
-    margin-right: 20px;
+.nav-left li, .nav-right li {
+    margin: 0 10px;
 }
 
-.nav-left li a {
+.nav-left li a, .nav-right li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
@@ -52,168 +49,93 @@ nav {
     transition: background-color 0.3s;
 }
 
-.nav-left li a:hover {
+.nav-left li a:hover, .nav-right li a:hover {
     background-color: #575757;
 }
 
-/* Right Nav */
-.nav-right {
-    display: flex;
-    justify-content: flex-end;
-    margin-right: 20px;
-    padding: 0;
-    list-style-type: none;
-}
-
-.nav-right li {
-    margin-left: 20px;
-}
-
-.nav-right li a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 9px 20px;
-    display: inline-block;
-    transition: background-color 0.3s;
-}
-
-.nav-right li a:hover {
-    background-color: #575757;
-}
-
-/* Main Container */
-.container {
+/* About container */
+.about-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 120px 60px 40px; /* Push below nav bar */
-    gap: 60px;
-    flex-wrap: wrap;
+    gap: 2rem; /* Gap between image and text */
+    max-width: 1200px; /* Prevent touching screen edges */
+    margin: 80px auto 20px; /* Space for navbar and bottom */
+    padding: 0 20px; /* Side padding */
+    min-height: calc(100vh - 100px);
 }
 
-/* Image Section */
-.image-section img {
-    max-width: 350px;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-/* Text Section */
-.text-section {
-    max-width: 600px;
-    background-color: rgba(0, 0, 0, 0.65);
-    padding: 30px;
-    border-radius: 20px;
-    line-height: 1.6;
-}
-
-/* Heading */
-.text-section h1 {
-    font-size: 1.8em;
-    margin-top: 0;
-}
-
-/* Responsive */
-@media screen and (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        padding: 140px 20px 30px;
-        gap: 40px;
-    }
-
-    .text-section,
-    .image-section {
-        max-width: 90%;
-        width: 100%;
-    }
-}
-.about-flex {
+/* Image section */
+.about-image {
+    flex: 1;
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    padding-top: 100px; /* Room for fixed navbar */
-    padding-left: 5%;   /* 0.5 unit from left */
-    padding-right: 5%;  /* 0.5 unit from right */
-    height: calc(100vh - 80px); /* Full height minus navbar height */
-    box-sizing: border-box;
-    gap: 10%; /* 1 unit gap between image and text (20% of 5 units is 1 unit) */
+    align-items: center;
 }
 
 .about-image img {
-    height: 100%; /* Match height of text */
-    width: auto;
-    max-height: 80%; /* To avoid it going out of screen */
-    border-radius: 20px;
-    object-fit: contain;
+    width: 100%;
+    height: 100%; /* Match text container height */
+    object-fit: cover; /* Ensure image fits nicely */
+    border-radius: 10px;
     border: 3px solid white;
+    max-height: 600px; /* Prevent oversized images */
 }
 
+/* Text section */
 .about-text {
-    color: white;
-    max-width: 40%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; /* Center-align text */
+    background-color: rgba(0, 0, 0, 0.65); /* Slight background for readability */
+    padding: 2rem;
+    border-radius: 10px;
+    max-height: 600px; /* Match image height */
+    overflow-y: auto; /* Allow scrolling if text overflows */
+}
+
+.about-text p {
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
-.about-text h1 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-/* ABOUT PAGE LAYOUT */
-.about-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: calc(100vh - 60px); /* Full height minus navbar */
-  padding: 0.5rem; /* Half unit padding around everything */
-  box-sizing: border-box;
-  margin-top: 60px; /* Push down to avoid overlap with navbar */
-  background-color: #0e0e0e;
-}
-
-/* IMAGE SECTION */
-.about-image {
-  flex: 1.75;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0.5rem; /* 1 unit gap split in half on both sides */
-}
-
-.about-image img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  object-fit: cover;
-  max-height: 90%;
-}
-
-/* TEXT SECTION */
-.about-text {
-  flex: 1.75;
-  background-color: transparent;
-  color: white;
-  padding: 1rem;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: center;
-}
-
-/* NAV BAR STAYS SAME (Already in your CSS) */
-
-/* RESPONSIVE */
+/* Responsive design */
 @media (max-width: 768px) {
-  .about-container {
-    flex-direction: column;
-    height: auto;
-  }
+    .about-container {
+        flex-direction: column;
+        margin-top: 60px; /* Adjust for navbar */
+        padding: 0 10px;
+        min-height: auto;
+    }
 
-  .about-image, .about-text {
-    flex: none;
-    width: 90%;
-    margin: 1rem auto;
-  }
+    .about-image, .about-text {
+        flex: none;
+        width: 100%;
+        max-height: none; /* Allow natural height on mobile */
+    }
+
+    .about-image img {
+        max-height: 400px; /* Smaller image on mobile */
+    }
+
+    .about-text {
+        padding: 1.5rem;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-left, .nav-right {
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+    }
+
+    .nav-left li, .nav-right li {
+        margin: 5px 0;
+    }
 }
